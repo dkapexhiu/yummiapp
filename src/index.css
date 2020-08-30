@@ -1,0 +1,397 @@
+/* fonts */
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/Quicksand-Light.woff2') format('woff2'),
+      url('/Quicksand-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* reset & common styles */
+body, ul, h1, h2, h3, p, button, a, div, label{
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: 'Quicksand';
+  letter-spacing: 2px;
+  list-style-type: none;
+  text-decoration: none;
+}
+body{
+  background-color: #fff!important;
+}
+.float-right{
+  float: right;
+}
+.margin-left{
+  margin-left:1.5rem;
+}
+button{
+  color: #000;
+  padding: 10px 30px;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #000;
+  margin: 40px auto 0;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.container{
+  max-width: 300px;
+  margin: 100px auto 40px;
+}
+.container h3{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.container li{
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* header */
+header{
+  display: flex;
+  padding: 40px;
+  align-items: center;
+}
+header .title{
+  flex-grow: 1;
+  margin-left: 20px;
+  font-size: 0.6em;
+}
+header div.logoless{
+  border-bottom: 1px solid rgba(0,0,0,1);
+  padding-bottom: 10px;
+  height: 40px;
+}
+header .appNameH1{
+  display: inline-block;
+}
+.menuicons{
+  display: inline-block;
+  cursor: pointer;
+}
+.dropdownform{
+  display: inline;
+    margin-right: 1.5rem;
+    position: relative;
+    top: -5px;
+}
+.dropdownform .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: none;
+}
+span.cartTotalNum{
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    font-weight: bolder;
+}
+.shoppingCartIcon{
+  position: relative;
+}
+.MuiInputBase-formControl.MuiInput-underline:before{
+  border-bottom: none;
+}
+.MuiSelect-select.MuiSelect-select {
+  padding-right: 24px;
+  font-size: 25px;
+  margin-top: 5px;
+}
+/* lists */
+li span.active{
+  font-weight: bold;
+}
+li span.active::before{
+  content: '>';
+  position: relative;
+  top: -2px;
+  margin-right: 6px;
+  transform: scale(0.8, 1);
+  display: inline-block;
+}
+
+/* pages */
+.home h2{
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.home.container, 
+.order.container{
+  text-align: center;
+  max-width: 800px;
+}
+.home button{
+  color: #000;
+  padding: 15px 30px;
+  font-size: 1.6em;
+  border: 3px solid #000;
+  margin: 30px 20px;
+}
+.order p{
+  margin: 20px auto;
+}
+
+/* modal */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.modal{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #000;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal button{
+  color: #444;
+  border-color: #444;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.modal p{
+  color: #444;
+  font-weight: bold;
+}
+
+/* loader */
+.loader{
+  width: 10px;
+  height: 10px;
+  margin: 40px auto;
+  border-radius: 50%;
+  background: #fff;
+}
+/* pizza grid */
+.pizzaContainer{
+  background:   #f6f6f6;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  padding: 1rem 1.1rem 2rem 1.1rem;
+  cursor: pointer;
+}
+.pizzaImg{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.pizzaInfo h2{
+  color: #164f64;
+  margin-bottom: 1.5rem;
+}
+.pizzaInfo span{
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #186a81;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Dialog */
+.MuiDialog-container .MuiPaper-root{
+  background-color: #164f64;
+}
+.MuiDialog-container ul li{
+  max-width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.MuiDialogContent-root{
+  overflow-x: hidden;
+}
+/*
+ul.MuiList-root{
+  background-color: #164f64;
+}
+*/
+/* Cart */
+
+.MuiPaper-root.MuiPaper-rounded{
+  background-color: #164f64;
+}
+.subtotalCart{
+  text-align: center;
+   margin: 2rem auto .5rem auto;
+}
+.shippingCart{
+  text-align: center;
+  display: block;
+  font-size: 14px;
+   margin: 0 auto 0;
+}
+button.cartCheckoutBtn{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin: 2rem auto;
+}
+
+/* orders */
+.orderul{
+  margin-left: 2rem;
+  padding: 1rem;
+}
+.orderul li{
+  margin-bottom: .3rem;
+}
+.singleOrder{
+  padding: 2rem;
+  margin: 1rem auto;
+  background-color: rgba(0, 0, 0,0.15);
+  border-radius: 10px;
+}
+
+#inputField {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 4%;
+  margin-top: 4%;
+}
+.makeStyles-form-14 .MuiInputBase-root {
+  color: #000!important;
+  border-bottom: 2px solid #000;
+}
+.MuiInputBase-input {
+  color: #000!important;
+}
+.MuiFormLabel-root{
+  color: #000!important;
+}
+
+.carousel .slide .legend{
+  top: 50%;
+  bottom: unset!important;
+  font-size: large!important;
+  background: #28a745!important;
+}
+
+/**
+ * Css for footer
+ * ------------------------------
+ */
+
+ #footer {
+  padding: 50px 0;
+  background: #fff;
+}
+
+#footer .footer_logo {
+  padding: 25px 0;
+}
+
+#footer .footer_logo > a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#footer .footer_logo a > img {
+  max-width: 250px;
+  width: auto;
+  height: auto;
+}
+
+#footer .connectwith ul li {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+#footer .connect_nav {
+  list-style: none;
+  margin-top: 20px;
+  text-align: center
+}
+
+#footer .connect_nav li {
+  display: inline-block;
+  margin: 4px;
+}
+
+#footer .connect_nav li a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #a7a7a7;
+  border: solid 1px #fff;
+  font-size: 17px;
+  border-radius: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#footer .connect_nav li a:hover {
+  color: var(--main-color);
+}
+
+#footer .copy_right p {
+  color: #000;
+  line-height: 20px;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#footer .copy_right p > a {
+  text-decoration: none !important;
+  display: inline-block;
+  color: #000;
+  margin-left: 5px;
+}
+
+/**
+* Css for footer
+* 'End
+* ------------------------------
+*/
+
+/**
+ * Css for
+ * @back-to-top
+ * ----------------------------
+ */
+
+ .back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-decoration: none !important;
+  z-index: 1000;
+  cursor: pointer;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+/**
+* Css for
+* @back-to-top
+----------------------------------
+*/
+
+.MuiAlert-standardError {
+  background-color: #fff!important;
+}
